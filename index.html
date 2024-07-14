@@ -11,8 +11,10 @@
   <body>
     <canvas></canvas>
     <script>
+      let audio = new Audio("music.mp3");
+      audio.loop = true; // Set the audio to loop indefinitely
+
       function playAudioOnce() {
-        let audio = new Audio("music.mp3");
         audio.play().catch(function (error) {
           console.error("Error playing audio:", error);
         });
@@ -24,3 +26,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
