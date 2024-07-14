@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <canvas></canvas>
+    <script>
+      function playAudioOnce() {
+        let audio = new Audio("music.mp3");
+        audio.play().catch(function (error) {
+          console.error("Error playing audio:", error);
+        });
+        document.removeEventListener("click", playAudioOnce);
+      }
+
+      document.addEventListener("click", playAudioOnce);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
